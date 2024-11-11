@@ -1,0 +1,40 @@
+{
+    "organizations": [
+        {
+            "name": "aav",
+            "adress": "sva",
+            "id": "tbs",
+            "contacts": [
+                {
+                    "name": "vb",
+                    "position": "sav",
+                    "id": "savvre"
+                }
+            ]
+        },
+        {
+            "name": "fverb",
+            "adress": "srr",
+            "id": "dgdt",
+            "contacts": []
+        },
+        {
+            "name": "kljco",
+            "adress": "fojoo",
+            "id": "fajm",
+            "contacts": []
+        },
+        {
+            "name": "R\u012bga",
+            "adress": "24",
+            "id": "06",
+            "contacts": []
+        },
+        {
+            "name": "Lietuba",
+            "adress": "23",
+            "id": "12",
+            "contacts": []
+        }
+    ]
+}
