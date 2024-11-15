@@ -13,6 +13,7 @@ def add_organization():
     organization_name=input('Organization nosaukums: ')
     organization_adress=input('Organization adresse: ')
     organization_id=input('Organization id: ')
+    sporta_zāles=input('dvieļu noma')
 
     organization={
         'name':organization_name,
