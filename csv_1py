@@ -1,0 +1,48 @@
+
+
+
+
+import csv
+import json
+songs=[]
+titles=[]
+year=[]
+count_year=[]
+
+with open("./spotify.csv","r") as csv_file:
+    reader=csv.DictReader(csv_file)
+    for line in reader:
+        songs.append(line)
+    
+with open("./spotify.json","w") as json_file:
+    json.dump(songs, json_file, indent=4)
+count=0
+for song in songs:
+    print(song['Title'])
+    if song['Year'] not in year:
+        year.append(song['Year'])
+
+song_count=0
+for year in years:
+    for song in songs:
+        if song['Year']==year:
+            song_count+=1
+    count_year.append(song_count)
+print(year)
+print(count_year)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+'''reader=csv.reader(f)
+    for i in reader:
+      titles.append(i[0])
+      year.append(i[3])
+    print(titles[1::])
+    print(list(set(year[1::])))'''

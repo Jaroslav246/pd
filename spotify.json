@@ -1,0 +1,62 @@
+[
+    {
+        "\u013c\u00bb\u00e6Title": "Tik Tok",
+        "Artist": "Kesha",
+        "Genre": "dance pop",
+        "Year": "2010",
+        "BPM": "120",
+        "Energy": "84",
+        "Danceability": "76",
+        "Loudness (dB)": "-3",
+        "Liveness": "29",
+        "Valeness": "71"
+    },
+    {
+        "\u013c\u00bb\u00e6Title": "Bad Romance",
+        "Artist": "Lady gaga",
+        "Genre": "dance pop",
+        "Year": "2010",
+        "BPM": "119",
+        "Energy": "92",
+        "Danceability": "70",
+        "Loudness (dB)": "-4",
+        "Liveness": "8",
+        "Valeness": "71"
+    },
+    {
+        "\u013c\u00bb\u00e6Title": "Baby",
+        "Artist": "Justin Bieber",
+        "Genre": "canadian pop",
+        "Year": "2010",
+        "BPM": "65",
+        "Energy": "86",
+        "Danceability": "73",
+        "Loudness (dB)": "-5",
+        "Liveness": "11",
+        "Valeness": "54"
+    },
+    {
+        "\u013c\u00bb\u00e6Title": "telephone",
+        "Artist": "Lady Gaga",
+        "Genre": "dance pop",
+        "Year": "2010",
+        "BPM": "122",
+        "Energy": "83",
+        "Danceability": "83",
+        "Loudness (dB)": "-6",
+        "Liveness": "11",
+        "Valeness": "71"
+    },
+    {
+        "\u013c\u00bb\u00e6Title": "Secrets",
+        "Artist": "OneRepublic",
+        "Genre": "dance pop",
+        "Year": "2010",
+        "BPM": "148",
+        "Energy": "76",
+        "Danceability": "52",
+        "Loudness (dB)": "-6",
+        "Liveness": "12",
+        "Valeness": "38"
+    }
+]
