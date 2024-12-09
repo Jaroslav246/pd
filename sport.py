@@ -51,27 +51,17 @@ contact_id = input('Darbinieka id: ')
 sporta_zāle = input('1 dvieļa noma maksā 5 eiro: ')
 
 
-abonement_id = int(input("Ievadi abonement ID: "))
+id_abonement = int(input("Ievadi abonement ID: "))
 nodarbiba = str(input("Ievadi nodarbiba nosaukuma: "))
 cena = float(input("Ievadi produkta cenu: "))
 sporta_veids = bool(input("Ievadi veids statusu (piemēram, 'ir' vai 'nav'): "))
 
-cursor.exucute('''
-INSERT INTO Abonement (abonement_id, nodarbiba, cena, sporta_veids
-VALUES (?, ?, ?, ?)
-''', (abonement_id, nodarbiba, cena, sporta_veids))
+cursor.exucute('''INSERT INTO Abonement (id_abonement, nodarbiba, sporta_veids VALUES (?, ?, ?)''', (id_abonement, nodarbiba, sporta_veids))
 
-print("Produkts pievienots!") 
+print("Abonement pievienots!") 
 
 orders = cursor.fetchall()
 print("Pasūtījumi:")
 for order in orders:
-    print(order)
-abonement_id = int(input("Ievadi produkta ID: "))
-nodarbiba = str(input("Ievadi produkta nosaukuma: "))
-cena = float(input("Ievadi produkta cenu: "))
-sporta_veids = bool(input("Ievadi noliktavas statusu (piemēram, 'ir' vai 'nav'): "))
-
-print("Produkts pievienots!") 
-
+   print(order)
 conn.close()
