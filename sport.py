@@ -46,17 +46,17 @@ print("Ieraksti ir izveidoti")'''
     cursor = conn.cursor()'''
 print("Ieraksti ir izveidoti")
 contact_name = input('Ievadiet Darbinieka vārdu: ')
-contact_position = input('Darbinieka abonement: ')
+contact_position = input('Darbinieka abonement numurs: ')
 contact_id = input('Darbinieka id: ')
-sporta_zāle = input('1 dvieļa noma maksā 5 eiro: ')
-
+sporta_zāle = input('1 nodarbibas maksā eiro: ')
 
 id_abonement = int(input("Ievadi abonement ID: "))
 nodarbiba = str(input("Ievadi nodarbiba nosaukuma: "))
-cena = float(input("Ievadi produkta cenu: "))
+cena = float(input("Ievadi cenu: "))
 sporta_veids = bool(input("Ievadi veids statusu (piemēram, 'ir' vai 'nav'): "))
 
 cursor.exucute('''INSERT INTO Abonement (id_abonement, nodarbiba, sporta_veids VALUES (?, ?, ?)''', (id_abonement, nodarbiba, sporta_veids))
+
 
 print("Abonement pievienots!") 
 
@@ -64,4 +64,7 @@ orders = cursor.fetchall()
 print("Pasūtījumi:")
 for order in orders:
    print(order)
+print("Izdrukā datumus, kuros klientam ar telefona nr '25763282' jaatdot produkti:")
+for rinda in nodarbiba:
+  print (rinda)
 conn.close()
