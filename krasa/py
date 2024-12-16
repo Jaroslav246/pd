@@ -1,0 +1,15 @@
+from tkinter import *
+import random 
+
+def change_color():
+    colors = ["red", "green", "blue", "yellow", "purple", "orange"]
+    root.config(bg=random.choice(colors))
+
+root = Tk()
+root.title("Krāsas maiņa")
+root.geometry("300x200")
+
+btn = Button(root, text="Mainīt krāsu!", font=("Arial", 14), command=change_color)
+btn.pack(pady=50)
+
+root.mainloop()
