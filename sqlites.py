@@ -18,12 +18,6 @@ SELECT
                Klients on Klients.klienta_id = pasutijums.klienta_id
             Join
                produkts on produkts.produkts_id = Detalas.produkta_id
-
-
-
-
-
-
 ''')
 
 

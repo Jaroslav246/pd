@@ -2,8 +2,8 @@ from tkinter import *
 
 def move_image():
     global img_x, img_y
-    img_x += 10
-    img_y += 10
+    img_x += randint(20, -20)
+    img_y += randint(20, -20)
     l_logo.place(img_x, img_y)
 
 root=Tk()

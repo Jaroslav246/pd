@@ -23,7 +23,7 @@ for song in songs:
         year.append(song['Year'])
 
 song_count=0
-for year in years:
+for year in year:
     for song in songs:
         if song['Year']==year:
             song_count+=1

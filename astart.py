@@ -11,7 +11,9 @@ for ieraksts in cursor:
     print("ADDRESS= ", ieraksts[3])
     print("AGE= ", ieraksts[2])
     print("SALARY= ", ieraksts[4], "\n")
- 
+
+
+
 print("Dati ir veiksmīgi nolasīti!")
 
 
@@ -21,9 +23,9 @@ print("Dati ir veiksmīgi nolasīti!")
              AGE            INT  NOT NULL,
              ADDRESS        CHAR(50),
              SALARY         REAL);)
-print("Tabula ir izveidota!")'''
+print("Tabula ir izveidota!")
 
-'''conn.execute("INSERT INTO COMPANY (ID, NAME, AGE, ADDRESS, SALARY) \
+conn.execute("INSERT INTO COMPANY (ID, NAME, AGE, ADDRESS, SALARY) \
       VALUES (1, 'PAUL', 32, 'California', 20000.0 )")
 conn.execute("INSERT INTO COMPANY (ID, NAME, AGE, ADDRESS, SALARY) \
       VALUES (2, 'Alex', 25, 'Latvia', 15000.0 )")
@@ -31,6 +33,10 @@ conn.execute("INSERT INTO COMPANY (ID, NAME, AGE, ADDRESS, SALARY) \
       VALUES (3, 'Teddy', 23, 'Norway', 20000.0 )")
 conn.execute("INSERT INTO COMPANY (ID, NAME, AGE, ADDRESS, SALARY) \
       VALUES (4, 'Mark', 25, 'Germany', 65000.0 )")
+
+conn.execute("UPDATE COMPANY set SALARY = 25000.0 where ID=1")
+conn.commit()
+print("Kopēju izmaiņu skaits :", conn.total_changes)
 
 conn.commit()
 print("Ieraksti ir izveidoti")'''
