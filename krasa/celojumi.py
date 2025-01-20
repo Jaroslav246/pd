@@ -52,7 +52,7 @@ def meklēt_klienti():
             if rezultati:
                 rezultati_str = ""
                 for r in rezultati:
-                    rezultati_str += f"{r[0]}: {r[1]} {r[2]}, {r[3]}, {r[4]}, {r[5]}\n"
+                    rezultati_str += f"{r[0]}: {r[1]} {r[2]}, {r[3]}\n"
             else:
                 messagebox.showinfo("Rezultāti", "Netika atrasts neviens klients.")
         else:
@@ -123,7 +123,7 @@ def izveidot_galveno_logu():
         messagebox.showinfo("Celjojumi", "Atvērta celjojumi pārvaldība.")
 
     logs = tk.Tk()
-    logs.title("Trenažieru zāles pārvaldība")
+    logs.title("Celojumi")
     logs.geometry("300x200")
 
     treneri_btn = tk.Button(logs, text="Klienti", command=klienti_poga, width=20, height=2, bg="lightblue")
