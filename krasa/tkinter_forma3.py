@@ -1,6 +1,7 @@
 import sqlite3
 import tkinter as tk
 from tkinter import messagebox
+import re
 
 conn = sqlite3.connect('trenazieru_zale.db')
 cursor = conn.cursor()
@@ -11,6 +12,14 @@ def pievienot_sportistu():
         uzvards = uzvards_entry.get()
         izglitibi = izglitiba_entry.get()
         kvalifikacija = kvalifikacija_entry.get()
+
+        pattern= r'^[A-Z]{1}[a-z]{1,}'
+        if not re.match(pattern, vards):
+            messagebox.showerror("Rezultāts", "Vārds nav derīgs!")
+
+        pattern1= r'^[A-Z]{1}[a-z]{1,}'
+        if not re.match(pattern1, uzvards):
+            messagebox.showerror("Rezultāts", "Uzvārds nav derīgs!")
 
         if vards and uzvards and izglitibi and kvalifikacija:
             cursor.execute(
@@ -120,6 +129,14 @@ def pievienot_treneri():
         uzvards = uzvards_entry.get()
         izglitiba = izglitiba_entry.get()
         kvalifikaciji = kvalifikacija_entry.get()
+
+        pattern= r'^[A-Z]{1}[a-z]{1,}'
+        if not re.match(pattern, vards):
+            messagebox.showerror("Rezultāts", "Vārds nav derīgs!")
+
+        pattern2= r'^[A-Z]{1}[a-z]{1,}'
+        if not re.match(pattern2, uzvards):
+            messagebox.showerror("Rezultāts", "Uzvārds nav derīgs!")
 
         if vards and uzvards and izglitiba and kvalifikacija_entry:
             cursor.execute(
