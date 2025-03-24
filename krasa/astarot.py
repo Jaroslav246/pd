@@ -10,7 +10,7 @@ def paarbaude_vaardu():
         messagebox.showinfo("Rezultāts", "Vards ir derīgs!")
     else:
         messagebox.showerror("Rezultāts", "Vārds nav derīgs!")
-
+        
 def paarbaude_diena():
     diena = diena_entry.get()
     pattern=r'^\d{2}{.}+\d{2}{.}+\d{4}+0\d{2}/\d{2}/\d{4}'

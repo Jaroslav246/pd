@@ -130,14 +130,6 @@ def pievienot_treneri():
         izglitiba = izglitiba_entry.get()
         kvalifikaciji = kvalifikacija_entry.get()
 
-        pattern= r'^[A-Z]{1}[a-z]{1,}'
-        if not re.match(pattern, vards):
-            messagebox.showerror("Rezultāts", "Vārds nav derīgs!")
-
-        pattern2= r'^[A-Z]{1}[a-z]{1,}'
-        if not re.match(pattern2, uzvards):
-            messagebox.showerror("Rezultāts", "Uzvārds nav derīgs!")
-
         if vards and uzvards and izglitiba and kvalifikacija_entry:
             cursor.execute(
                 "INSERT INTO Treneri (vards, uzvards, dzimšanas_gads, talrunis, pilsēta) VALUES (?, ?, ?, ?, ?)",
