@@ -128,7 +128,7 @@ def pievienot_treneri():
         vards = vards_entry.get()
         uzvards = uzvards_entry.get()
         izglitiba = izglitiba_entry.get()
-        kvalifikaciji = kvalifikacija_entry.get()
+        kvalifikacija = kvalifikacija_entry.get()
 
         if vards and uzvards and izglitiba and kvalifikacija_entry:
             cursor.execute(
