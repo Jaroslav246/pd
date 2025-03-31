@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkcalendar import Calendar
 import sqlite3
 from tkinter import messagebox
+
 conn = sqlite3.connect('datumi.db')
 cursor = conn.cursor()
 def calendar_view():
