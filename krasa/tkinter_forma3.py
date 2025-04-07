@@ -3,8 +3,20 @@ import tkinter as tk
 from tkinter import messagebox
 import re
 
-conn = sqlite3.connect('trenazieru_zale.db')
-cursor = conn.cursor()
+def load_trenazieru_zale():
+    try:
+        messagebox['values']=() #Notīrīt esošos nosaukumus
+        conn = sqlite3.connect('trenazieru_zale.db')
+        cursor = conn.cursor()
+        cursor.execute("SELECT title FROM zale")
+        titles = []
+        title_all=cursor.fetchall()
+        for title in title_all:
+            titles.append(title[0])
+    except:
+          print("Something went wrong")
+    finally:
+          print("The 'try except' is finished")
 
 def pievienot_sportistu():
     def saglabat_sportistu():
@@ -23,8 +35,8 @@ def pievienot_sportistu():
 
         if vards and uzvards and izglitibi and kvalifikacija:
             cursor.execute(
-                "INSERT INTO Sportisti (vards, uzvards, dzimšanas_gads, talrunis, pilsēta) VALUES (?, ?, ?, ?, ?)",
-                (vards, uzvards, izglitibi, kvalifikacija)
+            "INSERT INTO Sportisti (vards, uzvards, dzimšanas_gads, talrunis, pilsēta) VALUES (?, ?, ?, ?, ?)",
+            (vards, uzvards, izglitibi, kvalifikacija)
             )
             conn.commit()
             messagebox.showinfo("Veiksmīgi", "Sportists pievienots!")
@@ -60,8 +72,8 @@ def meklēt_sportistu():
     def atrast_sportistu():
         vards = vards_entry.get()
         if vards:
-            cursor.execute("SELECT * FROM Sportisti WHERE vards LIKE ?", (f"%{vards}%",))
-            rezultati = cursor.fetchall()
+            conn.cursor.execute("SELECT * FROM Sportisti WHERE vards LIKE ?", (f"%{vards}%",))
+            rezultati = conn.cursor.fetchall()
             if rezultati:
                 rezultati_str = ""
                 for r in rezultati:
